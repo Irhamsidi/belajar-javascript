@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variable</title>
+  </head>
+  <body>
+    <script>
+      // Setelah 2015 var diganti dengan let, isi let dapat diubah
+      let fullName;
+      let firstName;
+      let lastName;
+
+      fullName = "Irham Sidi Putra Wiratma";
+      firstName = "Irham Sidi";
+      lastName = "Putra Wiratma";
+
+      document.writeln(fullName);
+      document.writeln("</br>");
+      document.writeln(firstName);
+      document.writeln("</br>");
+      document.writeln(lastName);
+      document.writeln("</br>");
+
+      // Penggunaan const saat isi variable sudah pasti, isi const tidak dapat diubah lagi
+      const application = "Belajar JavaScript Dasar";
+      application = "Gamau Belajar"; // Akan muncul error pada log
+
+      document.writeln(application); // Kode tidak dieksekusi karena error pada const
+    </script>
+  </body>
+</html>

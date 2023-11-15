@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      const name = "Irham Sidi Putra Wiratma";
+      const firstName = "Irham";
+      const middleName = "Sidi Putra";
+      const lastName = "Wiratma";
+
+      const caraLama = "Name : " + firstName + " " + middleName + " " + lastName; // Cara lama menggunakan operator +
+      const template = `Name : ${firstName} ${middleName} ${lastName}`; // Menggunakan String Template `(Backtick)
+
+      console.log(caraLama);
+      console.log(template);
+
+      const nilai = 97;
+      const templateExpression = `Name : ${name}, Lulus : ${nilai > 70}`;
+
+      console.log(templateExpression);
+
+      let multiline = `Nama saya Irham,
+      Mahasiswa Informatika,
+      Universitas Ahmad Dahlan`;
+
+      document.writeln("<pre>");
+      document.writeln(multiline);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>
