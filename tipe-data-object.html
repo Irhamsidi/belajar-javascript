@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Number</title>
+  </head>
+  <body>
+    <script>
+      // Membuat sekaligus inisiasi data
+      const person = {
+        "nama lengkap": "Irham Sidi",
+        alamat: "Yogyakarta",
+        umur: 30,
+      };
+
+      // Menambah atau mengubah
+      //   person["nama"] = "Irham Sidi Putra Wiratma";
+      //   person["alamat"] = "Yogyakarta";
+      //   person["umur"] = 30;
+
+      console.table(person);
+
+      // Menghapus
+      delete person["umur"];
+
+      console.table(person);
+
+      console.info(`Nama Lengkap : ${person["nama lengkap"]}`);
+      console.info(`Alamat : ${person.alamat}`);
+      console.info(`Umur : ${person.umur}`);
+    </script>
+  </body>
+</html>
