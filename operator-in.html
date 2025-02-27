@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator In</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "Irham",
+        lastName: "Sidi",
+      };
+
+      if ("firstName" in person) {
+        alert(`Hello ${person.firstName}`);
+      } else {
+        alert("Hello");
+      }
+
+      // Operator in hanya melakukan pengecekan terhadap properti/index baik dalam keadaan terisi ataupun null/undefined
+      const student = {
+        firstName: "Irham",
+        middleName: undefined,
+        lastName: "Sidi",
+      };
+
+      if ("middleName" in student) {
+        console.info(`Hello ${student.middleName}`);
+      } else {
+        console.info("Hello Student");
+      }
+
+      const names = [null, "Sidi", null];
+      const result = 0 in names;
+
+      document.writeln(`<p>${result}</p>`);
+    </script>
+  </body>
+</html>
