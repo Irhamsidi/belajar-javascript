@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika Non Boolean</title>
+  </head>
+  <body>
+    <script>
+      // Operasi Logika OR apabila ada salah satu nilai Truthy maka akan diambil nilainya
+      console.info("Hello" || "");
+      console.info("" || []);
+      console.info(null || "NULL");
+      console.info(undefined || "UNDEFINED");
+
+      // Apabila keduanya Truthy maka akan diambil nilai yang pertama/kiri
+      console.info("0" || "NOL");
+
+      // Apabila keduanya Falsy maka akan diambil nilai yang terakhir/kanan
+      console.info(0 || false);
+
+      // Contoh
+      const person = {
+        firstName: "Irham",
+        lastName: "Sidi",
+      };
+
+      const name = person.firstName || person.lastName;
+      console.info(name);
+
+      // Operasi Logika AND apabila ada salah satu nilai Falsy maka akan diambil nilainya
+      console.info("HELLO" && "");
+      console.info("" && []);
+
+      // Apabila keduanya Truthy maka akan diambil nilai yang terakhir/kanan
+      console.info("0" && "NOL");
+
+      // Apabila keduanya Falsy maka akan diambil nilai yang pertama/kiri
+      console.info(0 && false);
+    </script>
+  </body>
+</html>
