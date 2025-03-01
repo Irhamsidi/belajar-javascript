@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For In</title>
+  </head>
+  <body>
+    <script>
+      // For In pada Object
+      const person = {
+        firstName: "Irham",
+        middleName: "Sidi",
+        lastName: "Putra",
+      };
+
+      for (const property in person) {
+        document.writeln(`<p>${property} : ${person[property]}</p>`);
+      }
+
+      // For In pada Array
+      const names = ["Irham", "Sidi", "Putra"];
+
+      for (const property in names) {
+        document.writeln(`<p>${property} : ${names[property]}</p>`);
+      }
+    </script>
+  </body>
+</html>
