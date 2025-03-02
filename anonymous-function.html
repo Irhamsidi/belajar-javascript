@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonymous Function</title>
+  </head>
+  <body>
+    <script>
+      // Anonymous function harus dimasukkan ke dalam variable/parameter
+      const say = function (name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+      };
+
+      say("Irham");
+      say("Budi");
+
+      // Contoh penggunaan sebagai parameter
+      function giveMeName(callback) {
+        callback("Irham");
+      }
+
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      });
+    </script>
+  </body>
+</html>
