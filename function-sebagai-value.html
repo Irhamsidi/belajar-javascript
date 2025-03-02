@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Sebagai Value</title>
+  </head>
+  <body>
+    <script>
+      function sayHello(name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+      }
+
+      sayHello("Irham");
+
+      // Function disimpan dalam variable sebagai value sehingga dapat dipanggil cukup dengan nama variable diikuti parameter
+      const say = sayHello;
+
+      say("Budi");
+
+      // Function menjadi sebuah parameter di function lain
+      function giveMeName(callback) {
+        callback("Irham"); // sayHelo("Irham")
+      }
+
+      giveMeName(sayHello); // memanggil function secara langsung
+      giveMeName(say); // memanggil variable yang telah berisi function
+    </script>
+  </body>
+</html>
