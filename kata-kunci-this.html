@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kata Kunci This</title>
+  </head>
+  <body>
+    <script>
+      // Pada browser this biasanya akan merujuk ke Window
+      console.info(this);
+
+      function sample() {
+        console.info(this);
+
+        function inner() {
+          console.info(this);
+        }
+
+        inner();
+      }
+
+      sample();
+
+      // This pada object digunakan untuk mengakses properti contohnya this.name karena tidak bisa menggunakan person.name
+      const person = {
+        name: "Irham",
+        sayHello: function (value) {
+          console.info(`Hello ${value} My Name is ${this.name}`);
+        },
+      };
+
+      person.sayHello("Irham");
+      person.sayHello("Budi");
+    </script>
+  </body>
+</html>
