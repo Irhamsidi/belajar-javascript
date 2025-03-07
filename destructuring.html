@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      {
+        const names = ["Irham", "Sidi", "Putra", "Budi", "Joko"];
+
+        // Pengambilan data secara manual
+        //   const firstName = names[0];
+        //   const middleName = names[1];
+        //   const lastName = names[2];
+
+        //   document.writeln(firstName);
+        //   document.writeln(middleName);
+        //   document.writeln(lastName);
+
+        // Pengambilan data menggunakan Destructuring Array
+        const [firstName, middleName, lastName, ...others] = names;
+
+        document.writeln(firstName);
+        document.writeln(middleName);
+        document.writeln(lastName);
+        console.info(others);
+      }
+
+      // Desctructuring Object
+      {
+        const person = {
+          firstName: "Irham",
+          lastName: "Sidi",
+          address: {
+            street: "Jalan Belum Ada",
+            city: "Jakarta",
+            country: "Indonesia",
+          },
+          hobby: "Basketball",
+        };
+
+        // Nama varible dapat diubah contohnya pada variable lastName diubah ke namaBelakang
+        const {
+          firstName,
+          lastName: namaBelakang,
+          address: { city, street, country },
+          ...others
+        } = person;
+        console.info(firstName);
+        console.info(namaBelakang);
+        console.info(city);
+        console.info(street);
+        console.info(country);
+        console.info(others);
+      }
+
+      // Desctructuring pada Function Parameter
+      {
+        function displayPerson({ firstName, middleName, lastName }) {
+          console.info(firstName);
+          console.info(middleName);
+          console.info(lastName);
+        }
+
+        const person = {
+          firstName: "Irham",
+          middleName: "Sidi",
+          lastName: "Putra",
+        };
+
+        displayPerson(person);
+
+        // Contoh menggunakan Array
+        function sum([first, second]) {
+          return first + second;
+        }
+
+        console.info(sum([1, 2]));
+        console.info(sum([10, 20]));
+      }
+
+      // Default Value pada Desctructuring
+      {
+        const names = ["Irham", "Sidi"];
+        const [firstName = "First Name", middleName = "Middle Name", lastName = "Last Name"] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+    </script>
+  </body>
+</html>
